@@ -1,0 +1,242 @@
+/* Global styles for the admin dashboard */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.2s ease;
+}
+
+/* Custom scrollbar for scrollable elements */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Chart specific styles */
+.recharts-cartesian-axis-tick {
+  font-size: 12px;
+}
+
+.recharts-legend-item-text {
+  font-size: 12px;
+}
+
+.recharts-tooltip-label {
+  font-weight: bold;
+}
+
+.recharts-tooltip-item-list {
+  padding: 8px;
+}
+
+.recharts-tooltip-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+}
+
+.recharts-tooltip-item-name {
+  margin-right: 8px;
+}
+
+.recharts-tooltip-item-value {
+  font-weight: bold;
+}
+
+/* Table hover effects */
+tr:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Mobile devices */
+  .chakra-box__ml-80px {
+    margin-left: 80px !important;
+  }
+
+  .chakra-box__ml-250px {
+    margin-left: 80px !important;
+  }
+
+  /* Stats cards stack vertically on mobile */
+  .chakra-flex__wrap {
+    flex-direction: column !important;
+  }
+
+  /* Stats cards take full width on mobile */
+  .chakra-box__min-w-250px {
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Chart height adjustment */
+  .chakra-box__h-350px {
+    height: 250px !important;
+  }
+
+  /* Padding adjustment for mobile */
+  .chakra-box__p-6 {
+    padding: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Small mobile devices */
+  .chakra-box__ml-80px {
+    margin-left: 0 !important;
+  }
+
+  .chakra-box__ml-250px {
+    margin-left: 0 !important;
+  }
+
+  /* Hide sidebar completely on very small screens */
+  .chakra-box__w-80px {
+    display: none !important;
+  }
+
+  /* Full width for content */
+  .chakra-box__flex-1 {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Increase padding on very small screens */
+  .chakra-box__p-6 {
+    padding: 12px !important;
+  }
+
+  /* Chart height for very small screens */
+  .chakra-box__h-350px {
+    height: 200px !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .print-content, .print-content * {
+    visibility: visible;
+  }
+
+  .print-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+/* Animation for smooth transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Skeleton loader for loading states */
+.skeleton-loader {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Tooltip styles */
+.chakra-tooltip__popper {
+  background: #1f2937 !important;
+  color: white !important;
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
+  font-size: 12px !important;
+}
+
+/* Badge styles */
+.chakra-badge__color-scheme-green {
+  background-color: #10b981 !important;
+}
+
+.chakra-badge__color-scheme-yellow {
+  background-color: #f59e0b !important;
+}
+
+/* Input focus styles */
+.chakra-input__focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Button hover effects */
+.chakra-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Card hover effects */
+.chakra-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.2rem !important;
+  }
+
+  p, span, td, th {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1rem !important;
+  }
+
+  p, span, td, th {
+    font-size: 0.85rem !important;
+  }
+}
