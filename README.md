@@ -295,12 +295,6 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## 👤 Author
 
-**Your Name** - [Your Website](https://yourwebsite.com) - [Your Email](mailto:youremail@example.com)
+**Your Name** - [react-saas-admin-dashboard](https://react-saas-admin-dashboard.vercel.app/) - [hiteshasoriya10@gmail.com](hiteshasoriya10@gmail.com)
 
-## 📞 Support
-
-For questions or issues, please open an issue on GitHub or contact the author.
-
----
-
-**Last Updated:** 2024
+**Last Updated:** 2026
